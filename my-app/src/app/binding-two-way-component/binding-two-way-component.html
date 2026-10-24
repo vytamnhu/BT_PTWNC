@@ -1,0 +1,66 @@
+<!-- <p>binding-two-way-component works!</p>
+<table>
+    <tr>
+        <td colspan="3">Phương Trình Bậc 2</td>
+    </tr>
+    <tr>
+        <td>Hệ số a:</td>
+        <td>
+            <input #view_hsa type="number" [value]="hsa"/>
+        </td>
+    </tr>    
+    <tr>
+        <td>Hệ số b:</td>
+        <td>
+            <input #view_hsb type="number" [value]="hsb"/>
+        </td>        
+        
+        <td>Hệ số c:</td>
+        <td>
+            <input #view_hsc type="number" [value]="hsc"/>
+        </td>
+    </tr>
+        <tr>
+        <td>Kết quả:</td>
+        <td id="tdketqua" #view>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)="giaiPt2( view_hsa.value, view_hsb.value, view)">Giải</button>
+            <button>PT Mới</button>
+        </td>
+    </tr>
+</table> -->
+<p>binding-two-way-component works!</p>
+<table>
+  <tr>
+    <td colspan="4"><b>Phương Trình Bậc 2</b></td>
+  </tr>
+  <tr>
+    <td>Hệ số a:</td>
+    <td>
+      <input type="number" [(ngModel)]="hsa" />
+    </td>
+    <td>Hệ số b:</td>
+    <td>
+      <input type="number" [(ngModel)]="hsb" />
+    </td>
+  </tr>
+  <tr>
+    <td>Hệ số c:</td>
+    <td>
+      <input type="number" [(ngModel)]="hsc" />
+    </td>
+  </tr>
+  <tr>
+    <td>Kết quả:</td>
+    <td colspan="3">{{ ketQua }}</td>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <button (click)="giaiPt2()">Giải</button>
+      <button (click)="ptMoi()">PT Mới</button>
+    </td>
+  </tr>
+</table>

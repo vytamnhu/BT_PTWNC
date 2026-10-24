@@ -1,0 +1,29 @@
+@if (errMessage()) {
+  <p style="color: red;">{{ errMessage() }}</p>
+}
+
+@if (product(); as prod) {
+  <table border="1">
+    <tr>
+      <td>Product ID:</td>
+      <td><input [value]="prod.id" readonly /></td>
+    </tr>
+    <tr>
+      <td>Product Name:</td>
+      <td><input [value]="prod.name" readonly /></td>
+    </tr>
+    <tr>
+      <td>Price:</td>
+      <td><input [value]="prod.price" readonly /></td>
+    </tr>
+    <tr>
+      <td>Image:</td>
+      <td>
+        <img [src]="prod.image" [alt]="prod.name" width="120" height="120" />
+      </td>
+    </tr>
+  </table>
+}
+
+<br />
+<button (click)="goBack()">Quay lại</button>

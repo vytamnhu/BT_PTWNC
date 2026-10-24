@@ -1,0 +1,31 @@
+<div class="container" *ngIf="fashion(); else loadingBlock">
+  <a routerLink="/fashion-list" class="btn-back">&larr; Quay lại danh sách</a>
+
+  <div class="card-detail">
+    <div class="img-box">
+      <img [src]="fashion()?.getBase64String()" [alt]="fashion()?.fashion_subject" />
+    </div>
+
+    <div class="info-box">
+      <div class="tags">
+        <span class="tag-style">{{ fashion()?.style }}</span>
+        <span class="tag-id">Mã sản phẩm: #{{ fashion()?.IdF }}</span>
+      </div>
+
+      <h1>{{ fashion()?.fashion_subject }}</h1>
+      <p class="slug-info">Slug SEO: <code>{{ fashion()?.slug }}</code></p>
+      
+      <hr />
+
+      <h3>Mô tả sản phẩm:</h3>
+      <p class="desc">{{ fashion()?.fashion_detail }}</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #loadingBlock>
+  <div class="loading">
+    <p *ngIf="!errorMessage()">Đang tải thông tin chi tiết...</p>
+    <p *ngIf="errorMessage()" class="error">{{ errorMessage() }}</p>
+  </div>
+</ng-template>

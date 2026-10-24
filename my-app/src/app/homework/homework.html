@@ -1,0 +1,75 @@
+<div id="container">
+    <ul>
+        <li><a href="#">HOME</a></li>
+
+        <li>
+            <a href="#">CHAPTER 2</a>
+            <ul>
+                <li><a [routerLink]="['/learn-directive']">Directive</a></li>
+                <li><a [routerLink]="['/learn-directive-2']">Product List</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">CHAPTER 3</a>
+            <ul>
+                <li><a [routerLink]="['/product-list-call-service']">Product Using Service 1</a></li>
+                <li><a [routerLink]="['/product-list-call-http-service']">Product List Call HTTP Service</a></li>
+                <li><a [routerLink]="['/products']">Product List Advanced</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">CHAPTER 4</a>
+            <ul>
+                <li><a [routerLink]="['/sample-nested']">SAMPLE NESTED</a></li>
+                <li><a [routerLink]="['/sample-nested/search-child']">-- Search Child</a></li>
+                <li><a [routerLink]="['/sample-nested/detail', 1]">-- Detail Child</a></li>
+                <li><a [routerLink]="['/search-products']">Search Products</a></li>
+                <li><a href="#">LESSON 03</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">CHAPTER 5</a>
+            <ul>
+                <li><a [routerLink]="['/course-register']">Course-register</a></li>
+                <li><a [routerLink]="['/login']">Login</a></li>
+                <li><a [routerLink]="['/course-reactive-register']">Course-register-reactive</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">CHAPTER 6</a>
+            <ul>
+                <li><a [routerLink]="['/fakeproducts']">Fake Products</a></li>
+                <li><a [routerLink]="['/fakeproducts2']">Fake Products 2</a></li>
+                <li><a [routerLink]="['/book-list']">Book List</a></li>
+                <li><a [routerLink]="['/book-detail']">Book Detail</a></li>
+                <li><a [routerLink]="['/book-new']">Book New</a></li>
+                <li><a [routerLink]="['/book-update']">Book Update</a></li>
+                <li><a [routerLink]="['/book-delete']">Book Delete</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">CHAPTER 7</a>
+            <ul>
+                <li><a [routerLink]="['/fashion-list']">Fashion List</a></li>
+                <li><a [routerLink]="['/fashion-detail']">Fashion Detail</a></li>
+                <li><a [routerLink]="['/fashion-new']">Fashion New</a></li>
+                <li><a [routerLink]="['/fashion-update']">Fashion Update</a></li>
+                <li><a [routerLink]="['/fashion-delete']">Fashion Delete</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">BAI TAP SLUG</a>
+            <ul>
+                <li><a [routerLink]="['/fashion-list']">Fashion Detail Slug</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+<div style="clear: both;"></div>

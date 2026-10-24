@@ -1,0 +1,34 @@
+{{errMessage()}}
+<table border="1">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Fashion Subject</td>
+            <td>Fashion Detail</td>
+            <td>Image</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        @for (fashion of fashions(); track fashion._id)
+        {
+        <tr>
+            <td>{{fashion._id}}</td>
+            <td>
+                <a [routerLink]="['/fashion-detail-slug', fashion.slug]">
+                    {{fashion.fashion_subject}}
+                </a>
+            </td>
+            <td>{{fashion.fashion_detail}}</td>
+            <td>
+                <img src="{{fashion.fashion_image}}" width="100px" height="100px">
+            </td>
+            <td>
+                <a [routerLink]="['/fashion-detail-slug', fashion.slug]">
+                    Xem Chi Tiết
+                </a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
